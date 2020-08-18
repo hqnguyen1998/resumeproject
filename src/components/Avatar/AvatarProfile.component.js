@@ -9,7 +9,8 @@ const useStyles = makeStyles((theme) => ({
   },
   avatar: {
     width: '170px',
-    borderRadius: '100px',
+    borderRadius: '50%',
+    border: '1px solid #000',
   },
 }));
 

@@ -7,6 +7,7 @@ const AvatarProfileSubText = ({ text }) => {
       variant='subtitle1'
       component='h1'
       align='center'
+      color='secondary'
       style={{ fontStyle: 'italic' }}
     >
       {text}

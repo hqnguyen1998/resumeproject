@@ -23,9 +23,17 @@ const educations = [
     description: 'Graduated High School',
   },
   {
+    description: 'Github Finder Project',
+    project: 'https://github.1998.dev',
+  },
+  {
+    description: 'SpaceX Apollo GraphQL Project',
+    project: 'https://spacexapiql.herokuapp.com',
+  },
+  {
     time: 'now',
     description: 'Working on a small E-Commercial Full-Stack Projects ',
-    project: 'https://doanvat-project.herokuapp.com/',
+    project: 'https://doanvat-project.herokuapp.com',
   },
 ];
 

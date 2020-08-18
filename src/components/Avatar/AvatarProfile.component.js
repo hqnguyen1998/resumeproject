@@ -8,7 +8,8 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
   },
   avatar: {
-    width: '170px',
+    width: '150px',
+    height: '150px',
     borderRadius: '50%',
     border: '1px solid #000',
   },

@@ -15,6 +15,17 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     padding: '6px 16px',
   },
+  link: {
+    '&:hover': {
+      cursor: 'pointer',
+    },
+  },
+  secondaryTail: {
+    backgroundColor: theme.palette.secondary.main,
+  },
+  primaryTail: {
+    backgroundColor: theme.palette.primary.main,
+  },
 }));
 
 export default function CustomizedTimeline({ educations }) {
@@ -31,20 +42,20 @@ export default function CustomizedTimeline({ educations }) {
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineDot color={i % 2 === 0 ? 'primary' : 'secondary'} />
-            <TimelineConnector />
+            <TimelineConnector
+              className={
+                i % 2 === 0 ? classes.primaryTail : classes.secondaryTail
+              }
+            />
           </TimelineSeparator>
           <TimelineContent>
             <Paper elevation={3} className={classes.paper}>
               <Typography>{education.description}</Typography>
-
-              <Link
-                href={education.project}
-                color='secondary'
-                underline='always'
-                component='a'
-              >
-                {education.project}
-              </Link>
+              {education.project && (
+                <Link href={education.project} className={classes.link}>
+                  {education.project}
+                </Link>
+              )}
             </Paper>
           </TimelineContent>
         </TimelineItem>

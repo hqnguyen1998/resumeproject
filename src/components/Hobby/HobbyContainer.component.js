@@ -1,14 +1,14 @@
 import React from 'react';
+import Context from '../../context/Context';
 import Hobby from './Hobby.component';
 import Header from '../Header.component';
 
-const hobbies = ['Coding', 'Music', 'Coffee', 'Photography', 'Gym'];
-
 const HobbyContainer = () => {
+  const state = React.useContext(Context);
   return (
     <div>
       <Header title='Hobby' />
-      <Hobby hobbies={hobbies} />
+      <Hobby hobbies={state.hobbies} />
     </div>
   );
 };
